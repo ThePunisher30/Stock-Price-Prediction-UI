@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <style>
+        /* CSS for the navbar */
+        .navbar {
+            background-color: #0dde5a; /* Light blue background color */
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* CSS for the navbar text */
+        .navbar-text {
+            font-size: 24px; /* Adjust the font size as needed */
+            color: #FFFFFF; /* White text color */
+        }
+        /* CSS for the content container */
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* CSS for images */
+        .content-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* CSS for text sections */
+        .content-text {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="navbar-text">
+        Stock Price Prediction 
+    </div>
+</div>
+
+<div class="content-container">
+    <div class="content-image">
+        <img src="{% static 'OGValues.png.jpg' %}">
+    </div>
+    <div class="content-text">
+        Actual Stock Price
+    </div>
+
+    <div class="content-image">
+        <img src="{% static 'LinearRegressionPrediction.png.jpg' %}">
+    </div>
+    <div class="content-text">
+        Root Mean Square Error (RMSE):  47.92636846506454
+    </div>
+
+    <div class="content-image">
+        <img src="{% static 'KNNPrediction.png.jpg' %}">
+    </div>
+    <div class="content-text">
+        Root Mean Square Error (RMSE):  65.08744197172685
+    </div>
+
+    <div class="content-image">
+        <img src="{% static 'LSTMPrediction.png.jpg' %}">
+    </div>
+    <div class="content-text">
+        Root Mean Square Error (RMSE):  7.0534829732214135
+    </div>
+
+
+
+    <div class="content-text">
+        By comparing RMSE values of all three algorithms, we can say that LSTM performs well in prediction as its RMSE value is very less than that of linear regression and KNN. Also from the above graphs, we can clearly see that LSTM identifies the future trend correctly.
+    </div>
+    
+</div>
+
+<!-- The rest of your website content goes here -->
+
+</body>
+</html>
